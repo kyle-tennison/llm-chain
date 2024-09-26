@@ -108,7 +108,6 @@ impl traits::Executor for Executor {
 
         let options = &self.options;
 
-        println!("OPENAI Options\n{:?}\n", &options);
         let opts = self.cascade(Some(options));
         let client = self.client.clone();
         let model = self.get_model_from_invocation_options(&opts);
